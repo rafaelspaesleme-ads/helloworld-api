@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  helloworlddb:
+    image: 'rafaelspaesleme/imagedatabase:latest'
+    network_mode: bridge
+    ports:
+      - 5555:5432
+    environment:
+      - DB_USER=postgres
+      - DB_PASSWD=banco@1004
+      - DB_NAME=hello_world_db
+
+  helloworldapp:
+    network_mode: bridge
+    ports:
+    - 9090:8080
+    depends_on:
+      - helloworlddb
+    links:
+      - helloworlddb
+    build: .
