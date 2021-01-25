@@ -181,8 +181,3 @@ Só são permitidas essas cinco linguas nesta versão._
 <br/>
 <hr/>
 <br/>
-
-
-
-
-_Obs.: Em breve será lançada a documentação oficial desta API com  mais riqueza de detalhes._
